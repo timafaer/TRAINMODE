@@ -9,6 +9,8 @@ cost_model.default_weights = {
   empty_space = 1,
 }
 
+-- Overlays caller-provided weights on top of the default cost model weights.
+-- Накладывает переданные веса поверх стандартных весов модели стоимости.
 local function merge_weights(weights)
   local merged = table_utils.copy_map(cost_model.default_weights)
   for key, value in pairs(weights or {}) do
@@ -17,6 +19,8 @@ local function merge_weights(weights)
   return merged
 end
 
+-- Counts distinct loading stations used by one delivery.
+-- Считает уникальные станции погрузки, использованные одной доставкой.
 local function count_unique_stations(delivery)
   local seen = {}
   local count = 0
@@ -31,6 +35,8 @@ local function count_unique_stations(delivery)
   return count
 end
 
+-- Calculates the weighted score and diagnostic metrics for a complete delivery plan.
+-- Считает взвешенную стоимость и диагностические метрики полного плана доставок.
 function cost_model.score_plan(plan, weights)
   weights = merge_weights(weights)
 
@@ -65,6 +71,8 @@ function cost_model.score_plan(plan, weights)
   }
 end
 
+-- Compares two scored plans using total cost first, then deterministic tie-breakers.
+-- Сравнивает два оцененных плана: сначала по полной стоимости, потом по стабильным правилам.
 function cost_model.is_better(left, right)
   if not right then
     return true

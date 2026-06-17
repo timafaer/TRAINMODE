@@ -34,10 +34,16 @@ API:
 ```text
 scripts/
   core/
+    request_builder.lua
+    offer_builder.lua
+    candidate_filter.lua
+    route_ranker.lua
+    load_planner.lua
     planner_core.lua
-    bin_packing.lua
     cost_model.lua
-    priority_queue.lua
+    combinator.lua
+    dispatcher_core.lua
+    table_utils.lua
 ```
 
 Правила для `core/`:
@@ -47,6 +53,22 @@ scripts/
 3. На выход возвращать обычные таблицы Lua: план, стоимость, причину отказа.
 4. Не иметь побочных эффектов.
 5. Не читать и не писать Factorio state напрямую.
+
+Текущий pipeline ядра:
+
+```text
+station table
+  -> request_builder: station_id + requested res[]
+  -> offer_builder: station_id + available res[]
+  -> candidate_filter: источники с хотя бы одним нужным ресурсом
+  -> route_ranker: стоимость пути и приоритеты станций
+  -> load_planner: упаковка ресурсов по поездам и станциям погрузки
+  -> dispatcher_core: общий результат для запроса
+```
+
+Комбинаторика и оптимизация не должны обращаться к сырым станциям напрямую.
+Они получают изолированные DTO, поэтому позже можно заменить алгоритм без
+переписывания регистрации станций и чтения сигналов.
 
 Такое ядро можно тестировать вне Factorio обычным Lua-runner'ом и при желании
 дублировать экспериментальные версии на другом языке для сравнения результатов.
