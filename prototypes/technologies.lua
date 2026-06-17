@@ -1,0 +1,3 @@
+local technologies = {}
+
+return technologies
