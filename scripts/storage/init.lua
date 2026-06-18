@@ -14,6 +14,8 @@ function storage_init.ensure(root)
   state.station_by_unit = state.station_by_unit or {}
   state.trains = state.trains or {}
   state.depots = state.depots or {}
+  state.storages = state.storages or {}
+  state.storages_by_station = state.storages_by_station or {}
   state.requests = state.requests or {}
   state.deliveries = state.deliveries or {}
   state.reservations = state.reservations or {
@@ -23,6 +25,7 @@ function storage_init.ensure(root)
   }
   state.scheduler = state.scheduler or { jobs = {}, results = {} }
   state.pending_requests = state.pending_requests or {}
+  state.gui = state.gui or {}
   return state
 end
 

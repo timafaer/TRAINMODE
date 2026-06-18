@@ -5,7 +5,9 @@ local requests = {}
 local function copy_positive(values)
   local result = {}
   for name, count in pairs(values or {}) do
-    if count > 0 then
+    local known_item =
+      not prototypes or not prototypes.item or prototypes.item[name]
+    if count > 0 and known_item then
       result[name] = count
     end
   end

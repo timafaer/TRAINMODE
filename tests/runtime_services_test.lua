@@ -3,6 +3,7 @@ local storage_init = require("scripts.storage.init")
 local requests = require("scripts.dispatcher.requests")
 local reservations = require("scripts.dispatcher.reservations")
 local scheduler_module = require("scripts.routing.scheduler")
+local cargo_transfer = require("scripts.integrations.cargo_transfer")
 
 local tests = {}
 
@@ -95,6 +96,86 @@ function tests.scheduler_uses_persisted_state()
 
   local second = scheduler_module.new(provider, function() return nil end, persisted)
   helper.assert_equal(second:get_job(1).id, 1, "persisted job")
+end
+
+local function fake_inventory(initial)
+  local contents = {}
+  for name, count in pairs(initial or {}) do
+    contents[name] = count
+  end
+  return {
+    get_item_count = function(name)
+      return contents[name] or 0
+    end,
+    insert = function(stack)
+      contents[stack.name] = (contents[stack.name] or 0) + stack.count
+      return stack.count
+    end,
+    remove = function(stack)
+      local removed = math.min(contents[stack.name] or 0, stack.count)
+      contents[stack.name] = (contents[stack.name] or 0) - removed
+      return removed
+    end,
+    contents = contents,
+  }
+end
+
+-- Checks direct physical transfer between linked storage and cargo wagon.
+-- Проверяет физический перенос между хранилищем и грузовым вагоном.
+function tests.cargo_transfer_loads_and_unloads_train()
+  local original_prototypes = _G.prototypes
+  local original_defines = _G.defines
+  _G.prototypes = { item = { iron = { stack_size = 1 } } }
+  _G.defines = { inventory = { chest = 1, cargo_wagon = 2 } }
+
+  local source_inventory = fake_inventory({ iron = 10 })
+  local target_inventory = fake_inventory({})
+  local wagon_inventory = fake_inventory({})
+  local state = {
+    storages_by_station = {
+      [1] = { 101 },
+      [2] = { 102 },
+    },
+    storages = {
+      [101] = {
+        entity = {
+          valid = true,
+          get_inventory = function() return source_inventory end,
+        },
+      },
+      [102] = {
+        entity = {
+          valid = true,
+          get_inventory = function() return target_inventory end,
+        },
+      },
+    },
+  }
+  local train = {
+    cargo_wagons = {
+      {
+        get_inventory = function() return wagon_inventory end,
+      },
+    },
+    get_item_count = function(name)
+      return wagon_inventory.get_item_count(name)
+    end,
+  }
+
+  local loaded = cargo_transfer.load_stop(state, train, 1, { iron = 10 })
+  local unloaded = cargo_transfer.unload_route(state, train, {
+    request_station_id = 2,
+    resources = { iron = 10 },
+  })
+
+  _G.prototypes = original_prototypes
+  _G.defines = original_defines
+
+  helper.assert_equal(loaded, true, "loaded")
+  helper.assert_equal(unloaded, true, "unloaded")
+  helper.assert_equal(source_inventory.contents.iron, 0, "source iron")
+  helper.assert_equal(target_inventory.contents.iron, 10, "target iron")
+  helper.assert_equal(wagon_inventory.contents.iron, 0, "wagon iron")
 end
 
 return tests

@@ -124,4 +124,11 @@ function scheduler:get_job(job_id)
   return self.jobs[job_id]
 end
 
+-- Removes one pending job and any stale result.
+-- Удаляет одну ожидающую задачу и ее устаревший результат.
+function scheduler:cancel(job_id)
+  self.jobs[job_id] = nil
+  self.results[job_id] = nil
+end
+
 return scheduler

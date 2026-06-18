@@ -194,8 +194,12 @@ local function select_depot(job, provider)
     17
   )
   if not index then
-    job.status = "failed"
-    job.error = "no_compatible_depot_has_free_train"
+    if #job.routes > 0 then
+      job.phase = "validation"
+    else
+      job.status = "failed"
+      job.error = "no_compatible_depot_has_free_train"
+    end
     return
   end
 

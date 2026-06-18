@@ -958,4 +958,26 @@ function tests.station_limit_can_force_additional_unique_station()
   )
 end
 
+-- Checks that lack of trains returns already planned routes as a partial plan.
+-- Проверяет частичный результат при нехватке свободных поездов.
+function tests.limited_train_count_returns_partial_routes()
+  local provider = make_provider({
+    requested_resources = { iron = 20 },
+    station_resources = {
+      [201] = { iron = 20 },
+      [202] = {},
+    },
+    station_available_slots = {
+      [201] = 2,
+      [202] = 0,
+    },
+    free_train_ids = { 501 },
+  })
+  local job = run_job(provider, 102)
+
+  helper.assert_equal(job.status, "completed", "job status")
+  helper.assert_equal(#job.routes, 1, "route count")
+  helper.assert_equal(job.routes[1].resources.iron, 10, "planned iron")
+end
+
 return tests

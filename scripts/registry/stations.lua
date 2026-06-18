@@ -13,9 +13,11 @@ local function default_record(id, entity)
     priority = 0,
     enabled = true,
     is_buffer = false,
+    send_only_to_buffer = false,
     source_policy = "normal",
     depot_id = nil,
     manual_requests = {},
+    condition = nil,
     available_resources = {},
     critical_version = 1,
   }
@@ -65,7 +67,8 @@ function stations.configure(state, unit_number, config)
 
   local structural_change = false
   for _, key in ipairs({
-    "mode", "priority", "enabled", "is_buffer", "source_policy", "depot_id",
+    "mode", "priority", "enabled", "is_buffer", "send_only_to_buffer",
+    "source_policy", "depot_id",
   }) do
     if config[key] ~= nil and station[key] ~= config[key] then
       station[key] = config[key]
@@ -74,6 +77,9 @@ function stations.configure(state, unit_number, config)
   end
   if config.manual_requests then
     station.manual_requests = config.manual_requests
+  end
+  if config.condition ~= nil then
+    station.condition = config.condition
   end
   if structural_change then
     station.critical_version = station.critical_version + 1
