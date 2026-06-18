@@ -1,3 +1,56 @@
-local items = {}
-
-return items
+data:extend({
+  {
+    type = "item",
+    name = "smart-train-stop",
+    icon = "__base__/graphics/icons/train-stop.png",
+    subgroup = "train-transport",
+    order = "a[train-system]-c[smart-train-stop]",
+    place_result = "smart-train-stop",
+    stack_size = 10,
+  },
+  {
+    type = "item-with-entity-data",
+    name = "smart-locomotive",
+    icon = "__base__/graphics/icons/locomotive.png",
+    subgroup = "train-transport",
+    order = "a[train-system]-f[smart-locomotive]",
+    place_result = "smart-locomotive",
+    stack_size = 5,
+  },
+  {
+    type = "item",
+    name = "smart-storage",
+    icon = "__base__/graphics/icons/steel-chest.png",
+    subgroup = "storage",
+    order = "a[items]-d[smart-storage]",
+    place_result = "smart-storage",
+    stack_size = 20,
+  },
+  {
+    type = "item",
+    name = "temporary-storage",
+    icon = "__base__/graphics/icons/steel-chest.png",
+    subgroup = "storage",
+    order = "a[items]-e[temporary-storage]",
+    place_result = "temporary-storage",
+    stack_size = 20,
+  },
+  {
+    type = "item",
+    name = "smart-belt-input",
+    icon = "__base__/graphics/icons/stack-inserter.png",
+    subgroup = "inserter",
+    order = "z[smart-belt-input]",
+    place_result = "smart-belt-input",
+    stack_size = 50,
+  },
+  {
+    type = "item",
+    name = "smart-belt-output",
+    icon = "__base__/graphics/icons/stack-inserter.png",
+    subgroup = "inserter",
+    order = "z[smart-belt-output]",
+    place_result = "smart-belt-output",
+    stack_size = 50,
+  },
+})

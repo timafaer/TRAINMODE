@@ -1,1 +1,4 @@
--- Prototype loading entry point. Runtime dispatcher logic is not loaded here.
+require("prototypes.entities")
+require("prototypes.items")
+require("prototypes.recipes")
+require("prototypes.technologies")
