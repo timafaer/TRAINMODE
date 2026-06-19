@@ -1,0 +1,4 @@
+{
+  "name": "TRAINMODE smoke test",
+  "description": "Creates a minimal smart train delivery and reports PASS or FAIL to factorio-current.log."
+}

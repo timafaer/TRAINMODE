@@ -147,6 +147,14 @@ local function initialize(job, provider)
   state.request_resource_names =
     sorted_resource_names(state.requested_resources)
   state.phase = "collect_stations"
+  if provider.trace then
+    provider.trace("planning_combinator_started", {
+      request_id = job.request_id,
+      loading_station_ids = job.loading_station_ids,
+      depot_ids = job.depot_ids,
+      requested_resources = state.requested_resources,
+    })
+  end
 end
 
 -- Reads and snapshots resources of one loading station.
@@ -583,6 +591,13 @@ function combinator.step(job, provider)
   elseif state.phase == "assign_resource" then
     assign_one_resource_chunk(job)
   elseif state.phase == "done" then
+    if provider.trace then
+      provider.trace("planning_combinator_completed", {
+        request_id = job.request_id,
+        load_plans = job.load_plans,
+        remaining_resources = state.remaining_request_resources,
+      })
+    end
     job.phase = "route_search"
     job.route_state = {
       plan_index = 1,

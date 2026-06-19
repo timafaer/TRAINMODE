@@ -19,6 +19,7 @@ local constants = {
     partial = "partial",
     complete = "complete",
     cancelled = "cancelled",
+    error = "error",
   },
   delivery_states = {
     assigned = "assigned",

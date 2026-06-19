@@ -59,15 +59,15 @@ function train_api.assign_route(state, delivery)
   }
 
   record.base_schedule = train.schedule
+  record.state = "assigned"
+  record.active_delivery_id = delivery.id
+  delivery.state = "active"
   train.schedule = { current = 1, records = records }
   train.manual_mode = false
   if not train.recalculate_path(true) then
     return false, "no-rail-path"
   end
 
-  record.state = "assigned"
-  record.active_delivery_id = delivery.id
-  delivery.state = "active"
   return true
 end
 

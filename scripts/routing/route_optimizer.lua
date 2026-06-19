@@ -191,6 +191,12 @@ local function step_validation(job, provider)
 
     job.phase = "completed"
     job.status = "completed"
+    if provider.trace then
+      provider.trace("planning_validation_completed", {
+        request_id = job.request_id,
+        route_count = #job.routes,
+      })
+    end
   end
 end
 

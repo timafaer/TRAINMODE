@@ -1,5 +1,6 @@
 local reservations = require("scripts.dispatcher.reservations")
 local train_registry = require("scripts.registry.trains")
+local logger = require("scripts.diagnostics.logger")
 
 local runtime_provider = {}
 
@@ -33,12 +34,27 @@ function runtime_provider.get_suitable_loading_station_ids(request_id)
   end
 
   local tiers = {}
+  local requester = state().stations[request.station_id]
+  local policy = requester and requester.source_policy or "normal"
+  local function station_is_useful(station)
+    for resource in pairs(request.remaining_resources) do
+      if (station.available_resources[resource] or 0) > 0 then
+        return true
+      end
+    end
+    return false
+  end
   for id, station in pairs(state().stations) do
     if station.enabled
       and station.mode == "load"
       and station.surface_index == request.surface_index
       and station.force_index == request.force_index
       and next(station.available_resources or {})
+      and (policy ~= "only-buffer" or station.is_buffer)
+      and (
+        not station.send_only_to_buffer
+        or (requester and requester.is_buffer)
+      )
     then
       tiers[station.priority] = tiers[station.priority] or {}
       tiers[station.priority][#tiers[station.priority] + 1] = id
@@ -51,17 +67,26 @@ function runtime_provider.get_suitable_loading_station_ids(request_id)
   table.sort(priorities, function(a, b) return a > b end)
   for _, priority in ipairs(priorities) do
     local ids = tiers[priority]
-    local useful = false
-    for _, station_id in ipairs(ids) do
-      local station = state().stations[station_id]
-      for resource in pairs(request.remaining_resources) do
-        if (station.available_resources[resource] or 0) > 0 then
-          useful = true
-          break
+    if policy == "prefer-buffer" then
+      local buffered = {}
+      for _, id in ipairs(ids) do
+        if state().stations[id].is_buffer
+          and station_is_useful(state().stations[id])
+        then
+          buffered[#buffered + 1] = id
         end
       end
+      if #buffered > 0 then
+        ids = buffered
+      end
     end
-    if useful then
+    local has_useful_station = false
+    for _, station_id in ipairs(ids) do
+      local station = state().stations[station_id]
+      has_useful_station =
+        has_useful_station or station_is_useful(station)
+    end
+    if has_useful_station then
       table.sort(ids)
       return ids
     end
@@ -133,11 +158,11 @@ function runtime_provider.get_station_available_train_slots(station_id)
     return 0
   end
   local entity = station.entity
-  local vanilla_available = math.max(0, entity.trains_limit - entity.trains_count)
-  return math.max(
-    0,
-    vanilla_available - reservations.get_station_slots(state(), station_id)
+  local occupied = math.max(
+    entity.trains_count,
+    reservations.get_station_slots(state(), station_id)
   )
+  return math.max(0, entity.trains_limit - occupied)
 end
 
 function runtime_provider.get_distance_between_stations(from_id, to_id)
@@ -162,6 +187,10 @@ function runtime_provider.get_data_version(entity_type, entity_id)
     local value = state().depots[entity_id]
     return value and value.critical_version
   end
+end
+
+function runtime_provider.trace(event_name, data)
+  logger.trace(event_name, data)
 end
 
 return runtime_provider

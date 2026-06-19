@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "smart-train-logistics",
-    icon = "__base__/graphics/technology/automated-rail-transportation.png",
+    icon = "__TRAINMODE__/graphics/icons/trainmode-universal-256.png",
     icon_size = 256,
     prerequisites = { "automated-rail-transportation", "advanced-circuit" },
     unit = {

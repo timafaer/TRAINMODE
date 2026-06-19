@@ -194,8 +194,12 @@ local function select_depot(job, provider)
     17
   )
   if not index then
-    job.status = "failed"
-    job.error = "no_compatible_depot_has_free_train"
+    if #job.routes > 0 then
+      job.phase = "validation"
+    else
+      job.status = "failed"
+      job.error = "no_compatible_depot_has_free_train"
+    end
     return
   end
 
@@ -286,14 +290,14 @@ end
 
 -- Emits one dispatcher-ready route and advances to the next load plan.
 -- Формирует один готовый маршрут и переходит к следующему плану загрузки.
-local function finish_plan(job)
+local function finish_plan(job, provider)
   local state = job.route_state
   local stops = reverse_stops(
     state.load_plan,
     state.reverse_station_ids
   )
 
-  job.routes[#job.routes + 1] = {
+  local route = {
     train_id = state.train_id,
     depot_id = state.depot_id,
     depot_station_id = state.depot_station_id,
@@ -302,6 +306,14 @@ local function finish_plan(job)
     resources = state.load_plan.resources,
     estimated_path_length = state.total_distance,
   }
+  job.routes[#job.routes + 1] = route
+  if provider.trace then
+    provider.trace("planning_route_selected", {
+      request_id = job.request_id,
+      route_index = #job.routes,
+      route = route,
+    })
+  end
 
   state.plan_index = state.plan_index + 1
   state.phase = "start_plan"
@@ -325,7 +337,7 @@ function route_search.step(job, provider)
   elseif state.phase == "select_train" then
     select_train(job, provider)
   elseif state.phase == "finish_plan" then
-    finish_plan(job)
+    finish_plan(job, provider)
   end
 end
 

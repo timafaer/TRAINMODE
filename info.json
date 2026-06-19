@@ -1,9 +1,9 @@
 {
   "name": "TRAINMODE",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "title": "Smart Train Dispatcher",
   "author": "timafaer",
   "factorio_version": "2.0",
   "dependencies": ["base >= 2.0", "space-age >= 2.0"],
-  "description": "Smart train dispatching prototype for Space Age."
+  "description": "Multi-resource smart train dispatcher with depots, priorities, reservations and linked storages for Space Age."
 }

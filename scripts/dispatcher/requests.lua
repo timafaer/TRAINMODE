@@ -1,11 +1,14 @@
 local constants = require("scripts.constants")
+local logger = require("scripts.diagnostics.logger")
 
 local requests = {}
 
 local function copy_positive(values)
   local result = {}
   for name, count in pairs(values or {}) do
-    if count > 0 then
+    local known_item =
+      not prototypes or not prototypes.item or prototypes.item[name]
+    if count > 0 and known_item then
       result[name] = count
     end
   end
@@ -32,6 +35,12 @@ function requests.create(state, station, resources, tick)
   }
   state.requests[id] = request
   state.pending_requests[#state.pending_requests + 1] = id
+  logger.trace("request_created", {
+    request_id = id,
+    station_id = station.id,
+    priority = station.priority,
+    resources = request.requested_resources,
+  })
   return request
 end
 
@@ -55,6 +64,7 @@ end
 -- Applies delivered stacks and closes a fully satisfied request.
 -- Учитывает доставленные стаки и закрывает выполненный запрос.
 function requests.apply_delivery(request, resources)
+  local previous_state = request.state
   for resource, stacks in pairs(resources) do
     request.remaining_resources[resource] =
       math.max(0, (request.remaining_resources[resource] or 0) - stacks)
@@ -63,11 +73,25 @@ function requests.apply_delivery(request, resources)
     if remaining > 0 then
       request.state = constants.request_states.partial
       request.critical_version = request.critical_version + 1
+      logger.trace("request_delivery_applied", {
+        request_id = request.id,
+        previous_state = previous_state,
+        state = request.state,
+        delivered_resources = resources,
+        remaining_resources = request.remaining_resources,
+      })
       return false
     end
   end
   request.state = constants.request_states.complete
   request.critical_version = request.critical_version + 1
+  logger.trace("request_delivery_applied", {
+    request_id = request.id,
+    previous_state = previous_state,
+    state = request.state,
+    delivered_resources = resources,
+    remaining_resources = request.remaining_resources,
+  })
   return true
 end
 
