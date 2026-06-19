@@ -1,5 +1,6 @@
 local reservations = require("scripts.dispatcher.reservations")
 local train_registry = require("scripts.registry.trains")
+local logger = require("scripts.diagnostics.logger")
 
 local runtime_provider = {}
 
@@ -186,6 +187,10 @@ function runtime_provider.get_data_version(entity_type, entity_id)
     local value = state().depots[entity_id]
     return value and value.critical_version
   end
+end
+
+function runtime_provider.trace(event_name, data)
+  logger.trace(event_name, data)
 end
 
 return runtime_provider

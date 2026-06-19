@@ -1,0 +1,4 @@
+{
+  "scenario-name": "TRAINMODE city-block load test",
+  "description": "Parameterized physical load test used by the 1/2/4/8 train scenarios."
+}

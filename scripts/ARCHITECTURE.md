@@ -3,6 +3,7 @@
 ```text
 control.lua
   -> bootstrap.lua
+  -> diagnostics/logger.lua
   -> registry/*
   -> gui/*
   -> dispatcher/service.lua

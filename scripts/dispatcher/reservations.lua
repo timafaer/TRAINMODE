@@ -1,3 +1,5 @@
+local logger = require("scripts.diagnostics.logger")
+
 local reservations = {}
 
 -- Returns resources reserved at one source station.
@@ -53,6 +55,11 @@ function reservations.reserve_routes(state, request_id, routes)
       route = route,
       state = "assigned",
     }
+    logger.trace("delivery_reserved", {
+      request_id = request_id,
+      delivery_id = delivery_id,
+      route = route,
+    })
   end
   return delivery_ids
 end
@@ -81,6 +88,12 @@ function reservations.release_delivery(state, delivery)
         math.max(0, (state.reservations.station_slots[stop.station_id] or 0) - 1)
     end
   end
+  logger.trace("delivery_reservation_released", {
+    request_id = delivery.request_id,
+    delivery_id = delivery.id,
+    train_id = delivery.train_id,
+    delivery_state = delivery.state,
+  })
 end
 
 return reservations

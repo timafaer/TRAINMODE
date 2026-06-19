@@ -112,6 +112,12 @@ function station_gui.open(state, player, entity)
   })
   add_labeled_field(
     frame,
+    "Available (item=stacks,...)",
+    "trainmode_resources",
+    resources_to_text(station.manual_resources)
+  )
+  add_labeled_field(
+    frame,
     "Requests (item=stacks,...)",
     "trainmode_requests",
     resources_to_text(station.manual_requests)
@@ -177,6 +183,8 @@ function station_gui.on_click(state, event)
     send_only_to_buffer =
       find_child(frame, "trainmode_send_only_to_buffer").state,
     manual_requests = parse_resources(find_child(frame, "trainmode_requests").text),
+    manual_resources =
+      parse_resources(find_child(frame, "trainmode_resources").text),
     condition = condition,
   })
   frame.destroy()

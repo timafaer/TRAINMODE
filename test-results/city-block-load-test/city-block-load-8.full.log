@@ -1,0 +1,552 @@
+   0.000 2026-06-19 13:31:12; Factorio 2.0.76 (build 84451, linux64, steam, space-age)
+   0.000 Operating system: Linux
+   0.000 Program arguments: "/home/timafaer/.local/share/Steam/steamapps/common/Factorio/bin/x64/factorio" "--config" "/tmp/trainmode-factorio/config/config.ini" "--mod-directory" "/tmp/trainmode-factorio/mods" "--benchmark" "/tmp/trainmode-factorio/write-data/saves/TRAINMODE/city-block-load-8.zip" "--benchmark-ticks" "20000" "--benchmark-runs" "1" 
+   0.000 Config path: /tmp/trainmode-factorio/config/config.ini
+   0.000 Read data path: /home/timafaer/.local/share/Steam/steamapps/common/Factorio/data
+   0.000 Write data path: /tmp/trainmode-factorio/write-data [15583/15945MB]
+   0.000 Binaries path: /home/timafaer/.local/share/Steam/steamapps/common/Factorio/bin
+   0.005 System info: [CPU: 12th Gen Intel(R) Core(TM) i7-12700F, 20 cores, RAM: 31891 MB]
+   0.005 Environment: DISPLAY=:0 WAYLAND_DISPLAY=wayland-0 DESKTOP_SESSION=gnome XDG_SESSION_DESKTOP=gnome XDG_CURRENT_DESKTOP=GNOME SDL_VIDEODRIVER=<unset> __GL_FSAA_MODE=<unset> __GL_LOG_MAX_ANISO=<unset> __GL_SYNC_TO_VBLANK=<unset> __GL_SORT_FBCONFIGS=<unset> __GL_YIELD=<unset>
+   0.005 Running in headless mode
+   0.005 Audio is disabled
+   0.006 Info ModManager.cpp:449: FeatureFlag expansion-shaders = true
+   0.006 Info ModManager.cpp:449: FeatureFlag freezing = true
+   0.006 Info ModManager.cpp:449: FeatureFlag quality = true
+   0.006 Info ModManager.cpp:449: FeatureFlag rail-bridges = true
+   0.006 Info ModManager.cpp:449: FeatureFlag segmented-units = true
+   0.006 Info ModManager.cpp:449: FeatureFlag space-travel = true
+   0.006 Info ModManager.cpp:449: FeatureFlag spoiling = true
+   0.007 Loading mod settings TRAINMODE 0.2.0 (settings.lua)
+   0.008 Loading mod core 0.0.0 (data.lua)
+   0.016 Loading mod base 2.0.76 (data.lua)
+   0.095 Loading mod elevated-rails 2.0.76 (data.lua)
+   0.117 Loading mod quality 2.0.76 (data.lua)
+   0.125 Loading mod space-age 2.0.76 (data.lua)
+   0.227 Loading mod TRAINMODE 0.2.0 (data.lua)
+   0.237 Loading mod base 2.0.76 (data-updates.lua)
+   0.244 Loading mod quality 2.0.76 (data-updates.lua)
+   0.257 Loading mod space-age 2.0.76 (data-updates.lua)
+   0.314 Checksum for core: 4187927925
+   0.314 Checksum of base: 1879415942
+   0.314 Checksum of elevated-rails: 70351106
+   0.314 Checksum of quality: 1142589254
+   0.314 Checksum of space-age: 1510664043
+   0.314 Checksum of TRAINMODE: 1231780154
+   0.575 Prototype list checksum: 2316354925
+   0.621 Info PlayerData.cpp:66: Local player-data.json unavailable
+   0.621 Info PlayerData.cpp:71: Cloud player-data.json unavailable
+   0.621 Info GlobalContext.cpp:1300: Resetting config.
+   0.621 Factorio initialised
+   0.621 Loading map /tmp/trainmode-factorio/write-data/saves/TRAINMODE/city-block-load-8.zip: 1012355 bytes.
+   0.628 Loading level.dat: 1670617 bytes.
+   0.628 Info Scenario.cpp:154: Map version 2.0.76-0
+   0.647 Blueprint storage "blueprint-storage-2.dat" was not found, trying to load previous version storage "blueprint-storage.dat"
+   0.648 Loading script.dat: 9077 bytes.
+   0.649 Checksum for script __level__/control.lua: 1017378038
+   0.651 Checksum for script __TRAINMODE__/control.lua: 1985667899
+Running update 0
+Running update 100
+   0.690 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:528: TRAINMODE_LOAD_TEST requests_enabled tick=180 definitions={{name = "science", resources = {["copper-plate"] = 30, ["iron-plate"] = 40}, x = 200}, {name = "mall-consumer", resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20, ["steel-plate"] = 20}, x = 235}, {name = "rocket", resources = {["copper-plate"] = 30, ["iron-plate"] = 40, ["steel-plate"] = 20}, x = 270}}
+   0.691 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=180 event=request_created data={priority = 9, request_id = 1, resources = {["copper-plate"] = 30, ["iron-plate"] = 40}, station_id = 13}
+   0.691 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=180 event=request_created data={priority = 8, request_id = 2, resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20, ["steel-plate"] = 20}, station_id = 14}
+   0.691 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=180 event=request_created data={priority = 7, request_id = 3, resources = {["copper-plate"] = 30, ["iron-plate"] = 40, ["steel-plate"] = 20}, station_id = 15}
+   0.694 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=195 event=planning_job_enqueued data={depot_ids = {1, 2, 3, 4, 5, 6, 7, 8}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.694 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=195 event=planning_combinator_started data={depot_ids = {1, 2, 3, 4, 5, 6, 7, 8}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 40}}
+   0.695 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=195 event=planning_combinator_completed data={load_plans = {{capacity_stacks = 40, depot_ids = {1, 2, 3, 4, 5, 6, 7, 8}, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 40}, station_id = 9}}, total_stacks = 40, train_class_id = 40}, {capacity_stacks = 40, depot_ids = {1, 2, 3, 4, 5, 6, 7, 8}, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 9}}, total_stacks = 30, train_class_id = 40}}, remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0}, request_id = 1}
+   0.695 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=195 event=planning_route_selected data={request_id = 1, route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 310, request_station_id = 13, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 40}, station_id = 9}}, train_id = 25}, route_index = 1}
+   0.695 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=195 event=planning_route_selected data={request_id = 1, route = {depot_id = 1, depot_station_id = 1, estimated_path_length = 520, request_station_id = 13, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 9}}, train_id = 4}, route_index = 2}
+Running update 200
+   0.697 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=210 event=planning_job_enqueued data={depot_ids = {1, 2, 3, 4, 5, 6, 7, 8}, loading_station_ids = {9, 10, 11, 12}, priority = 8, request_id = 2, station_id = 14}
+   0.697 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=210 event=planning_validation_completed data={request_id = 1, route_count = 2}
+   0.697 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=210 event=planning_job_completed data={request_id = 1, route_count = 2}
+   0.698 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=210 event=planning_combinator_started data={depot_ids = {1, 2, 3, 4, 5, 6, 7, 8}, loading_station_ids = {9, 10, 11, 12}, request_id = 2, requested_resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20, ["steel-plate"] = 20}}
+   0.698 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=210 event=planning_combinator_completed data={load_plans = {{capacity_stacks = 40, depot_ids = {1, 2, 3, 4, 5, 6, 7, 8}, resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, stops = {{resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, station_id = 11}}, total_stacks = 40, train_class_id = 40}, {capacity_stacks = 40, depot_ids = {1, 2, 3, 4, 5, 6, 7, 8}, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 11}}, total_stacks = 20, train_class_id = 40}}, remaining_resources = {["electronic-circuit"] = 0, ["iron-gear-wheel"] = 0, ["steel-plate"] = 0}, request_id = 2}
+   0.700 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=225 event=planning_result_accepted data={accepted_route_count = 1, available_target_slots = 1, planned_route_count = 2, request_id = 1, routes = {{depot_id = 8, depot_station_id = 8, estimated_path_length = 310, request_station_id = 13, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 40}, station_id = 9}}, train_id = 25}}}
+   0.701 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=225 event=delivery_reserved data={delivery_id = 1, request_id = 1, route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 310, request_station_id = 13, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 40}, station_id = 9}}, train_id = 25}}
+   0.701 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=225 event=delivery_assigned data={delivery_id = 1, request_id = 1, route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 310, request_station_id = 13, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 40}, station_id = 9}}, train_id = 25}, train_id = 25}
+   0.701 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=225 event=planning_job_enqueued data={depot_ids = {1, 2, 3, 4, 5, 6, 7, 8}, loading_station_ids = {9, 10, 11, 12}, priority = 7, request_id = 3, station_id = 15}
+   0.701 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=225 event=planning_route_selected data={request_id = 2, route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 404, request_station_id = 14, resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, stops = {{resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, station_id = 11}}, train_id = 19}, route_index = 1}
+   0.701 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=225 event=planning_route_selected data={request_id = 2, route = {depot_id = 1, depot_station_id = 1, estimated_path_length = 554, request_station_id = 14, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 11}}, train_id = 4}, route_index = 2}
+   0.701 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=225 event=planning_validation_completed data={request_id = 2, route_count = 2}
+   0.701 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=225 event=planning_job_completed data={request_id = 2, route_count = 2}
+   0.701 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=225 event=planning_combinator_started data={depot_ids = {1, 2, 3, 4, 5, 6, 7, 8}, loading_station_ids = {9, 10, 11, 12}, request_id = 3, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 40, ["steel-plate"] = 20}}
+   0.704 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=240 event=planning_result_accepted data={accepted_route_count = 1, available_target_slots = 1, planned_route_count = 2, request_id = 2, routes = {{depot_id = 6, depot_station_id = 6, estimated_path_length = 404, request_station_id = 14, resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, stops = {{resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, station_id = 11}}, train_id = 19}}}
+   0.705 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=240 event=delivery_reserved data={delivery_id = 2, request_id = 2, route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 404, request_station_id = 14, resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, stops = {{resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, station_id = 11}}, train_id = 19}}
+   0.705 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=240 event=delivery_assigned data={delivery_id = 2, request_id = 2, route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 404, request_station_id = 14, resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, stops = {{resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, station_id = 11}}, train_id = 19}, train_id = 19}
+   0.705 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=240 event=planning_combinator_completed data={load_plans = {{capacity_stacks = 40, depot_ids = {1, 2, 3, 4, 5, 6, 7, 8}, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 20}, station_id = 9}, {resources = {["iron-plate"] = 20}, station_id = 12}}, total_stacks = 40, train_class_id = 40}, {capacity_stacks = 40, depot_ids = {1, 2, 3, 4, 5, 6, 7, 8}, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 9}}, total_stacks = 30, train_class_id = 40}, {capacity_stacks = 40, depot_ids = {1, 2, 3, 4, 5, 6, 7, 8}, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 10}}, total_stacks = 20, train_class_id = 40}}, remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 0}, request_id = 3}
+   0.705 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=240 event=planning_route_selected data={request_id = 3, route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 530, request_station_id = 15, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 20}, station_id = 9}, {resources = {["iron-plate"] = 20}, station_id = 12}}, train_id = 10}, route_index = 1}
+   0.705 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=240 event=planning_route_selected data={request_id = 3, route = {depot_id = 7, depot_station_id = 7, estimated_path_length = 410, request_station_id = 15, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 9}}, train_id = 22}, route_index = 2}
+   0.706 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=240 event=planning_route_selected data={request_id = 3, route = {depot_id = 1, depot_station_id = 1, estimated_path_length = 590, request_station_id = 15, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 10}}, train_id = 4}, route_index = 3}
+   0.706 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=240 event=planning_validation_completed data={request_id = 3, route_count = 3}
+   0.706 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=240 event=planning_job_completed data={request_id = 3, route_count = 3}
+   0.709 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=255 event=planning_result_accepted data={accepted_route_count = 1, available_target_slots = 1, planned_route_count = 3, request_id = 3, routes = {{depot_id = 3, depot_station_id = 3, estimated_path_length = 530, request_station_id = 15, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 20}, station_id = 9}, {resources = {["iron-plate"] = 20}, station_id = 12}}, train_id = 10}}}
+   0.709 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=255 event=delivery_reserved data={delivery_id = 3, request_id = 3, route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 530, request_station_id = 15, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 20}, station_id = 9}, {resources = {["iron-plate"] = 20}, station_id = 12}}, train_id = 10}}
+   0.709 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=255 event=delivery_assigned data={delivery_id = 3, request_id = 3, route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 530, request_station_id = 15, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 20}, station_id = 9}, {resources = {["iron-plate"] = 20}, station_id = 12}}, train_id = 10}, train_id = 10}
+Running update 300
+   0.717 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:538: TRAINMODE_LOAD_TEST requests_frozen ids={1, 2, 3}
+   0.717 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:428: TRAINMODE_LOAD_TEST unused_depot_trains_removed=5 reason=test-track-has-no-depot-sidings
+Running update 400
+   0.742 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=437 event=delivery_arrived_loader data={cargo_items = 0, cumulative_resources = {["iron-plate"] = 40}, delivery_id = 1, request_id = 1, station_id = 9, train_id = 25}
+Running update 500
+Running update 600
+   0.772 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:447: TRAINMODE_LOAD_TEST STATUS trains=8 tick=600 elapsed=420 request_states={{delivery_ids = {1}, remaining_resources = {["copper-plate"] = 30, ["iron-plate"] = 40}, state = "assigned"}, {delivery_ids = {2}, remaining_resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20, ["steel-plate"] = 20}, state = "assigned"}, {delivery_ids = {3}, remaining_resources = {["copper-plate"] = 30, ["iron-plate"] = 40, ["steel-plate"] = 20}, state = "assigned"}} deliveries={{route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 310, request_station_id = 13, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 40}, station_id = 9}}, train_id = 25}, started_loading = true, state = "active", train_id = 25}, {route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 404, request_station_id = 14, resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, stops = {{resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, station_id = 11}}, train_id = 19}, state = "active", train_id = 19}, {route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 530, request_station_id = 15, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 20}, station_id = 9}, {resources = {["iron-plate"] = 20}, station_id = 12}}, train_id = 10}, state = "active", train_id = 10}} trains_state={[10] = {capacity_stacks = 40, cargo_wagon_count = 1, delivery_id = 3, depot_id = 3, state = "assigned", train_state = 5}, [19] = {capacity_stacks = 40, cargo_wagon_count = 1, delivery_id = 2, depot_id = 6, state = "assigned", train_state = 5}, [25] = {capacity_stacks = 40, cargo_wagon_count = 1, delivery_id = 1, depot_id = 8, state = "assigned", train_state = 0}, [26] = {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, [27] = {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, [28] = {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, [29] = {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, [30] = {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}} jobs={}
+   0.781 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=653 event=delivery_arrived_loader data={cargo_items = 0, cumulative_resources = {["iron-plate"] = 20}, delivery_id = 3, request_id = 3, station_id = 9, train_id = 10}
+Running update 700
+   0.804 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=781 event=delivery_arrived_loader data={cargo_items = 0, cumulative_resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, delivery_id = 2, request_id = 2, station_id = 11, train_id = 19}
+Running update 800
+   0.819 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=874 event=delivery_arrived_requester data={cargo_items = 4000, delivery_id = 1, request_id = 1, station_id = 13, train_id = 25}
+   0.819 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=874 event=delivery_reservation_released data={delivery_id = 1, delivery_state = "complete", request_id = 1, train_id = 25}
+   0.819 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=874 event=request_delivery_applied data={delivered_resources = {["iron-plate"] = 40}, previous_state = "assigned", remaining_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}, request_id = 1, state = "partial"}
+   0.819 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=874 event=delivery_completed data={delivery_id = 1, remaining_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}, request_id = 1, request_state = "partial", resources = {["iron-plate"] = 40}, train_id = 25}
+   0.821 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=885 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.821 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=885 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.821 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=885 event=planning_job_completed data={request_id = 1, route_count = 0}
+Running update 900
+   0.823 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:321: TRAINMODE_LOAD_TEST train_cleared delivery_id=1 old_train_id=25 slot=8
+   0.823 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=900 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.823 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=900 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.823 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=900 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.823 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=900 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.826 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=915 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.826 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=915 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.826 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=915 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.826 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=915 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.828 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=930 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.828 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=930 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.829 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=930 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.829 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=930 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.831 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=945 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.831 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=945 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.831 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=945 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.831 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=945 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.834 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=960 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.834 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=960 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.834 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=960 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.834 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=960 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.837 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=975 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.837 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=975 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.837 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=975 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.837 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=975 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.839 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=990 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.839 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=990 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.840 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=990 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.840 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=990 event=planning_job_completed data={request_id = 1, route_count = 0}
+Running update 1000
+   0.843 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1005 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.843 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1005 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.843 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1005 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.843 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1005 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.845 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1020 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.845 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1020 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.845 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1020 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.845 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1020 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.848 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1035 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.848 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1035 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.848 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1035 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.848 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1035 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.849 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1043 event=delivery_arrived_loader data={cargo_items = 2000, cumulative_resources = {["iron-plate"] = 40}, delivery_id = 3, request_id = 3, station_id = 12, train_id = 10}
+   0.850 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1050 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.850 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1050 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.850 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1050 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.850 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1050 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.853 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1065 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.853 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1065 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.853 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1065 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.853 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1065 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.855 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1080 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.855 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1080 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.855 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1080 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.855 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1080 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.858 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1095 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.858 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1095 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.858 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1095 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.858 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1095 event=planning_job_completed data={request_id = 1, route_count = 0}
+Running update 1100
+   0.860 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1110 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.861 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1110 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.861 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1110 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.861 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1110 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.861 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1111 event=delivery_arrived_requester data={cargo_items = 6000, delivery_id = 2, request_id = 2, station_id = 14, train_id = 19}
+   0.861 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1111 event=delivery_reservation_released data={delivery_id = 2, delivery_state = "complete", request_id = 2, train_id = 19}
+   0.861 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1111 event=request_delivery_applied data={delivered_resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, previous_state = "assigned", remaining_resources = {["electronic-circuit"] = 0, ["iron-gear-wheel"] = 0, ["steel-plate"] = 20}, request_id = 2, state = "partial"}
+   0.861 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1111 event=delivery_completed data={delivery_id = 2, remaining_resources = {["electronic-circuit"] = 0, ["iron-gear-wheel"] = 0, ["steel-plate"] = 20}, request_id = 2, request_state = "partial", resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, train_id = 19}
+   0.863 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1125 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.864 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1125 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.864 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1125 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.864 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1125 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.866 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:321: TRAINMODE_LOAD_TEST train_cleared delivery_id=2 old_train_id=19 slot=6
+   0.866 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1140 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.866 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1140 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.866 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1140 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.866 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1140 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.869 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1155 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.869 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1155 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.869 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1155 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.869 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1155 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.871 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1170 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.871 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1170 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.871 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1170 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.871 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1170 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.874 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1185 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.874 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1185 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.874 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1185 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.874 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1185 event=planning_job_completed data={request_id = 1, route_count = 0}
+Running update 1200
+   0.877 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:447: TRAINMODE_LOAD_TEST STATUS trains=8 tick=1200 elapsed=1020 request_states={{delivery_ids = {1}, last_error = "empty-route-plan", remaining_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}, state = "planning"}, {delivery_ids = {2}, remaining_resources = {["electronic-circuit"] = 0, ["iron-gear-wheel"] = 0, ["steel-plate"] = 20}, state = "open"}, {delivery_ids = {3}, remaining_resources = {["copper-plate"] = 30, ["iron-plate"] = 40, ["steel-plate"] = 20}, state = "assigned"}} deliveries={{route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 310, request_station_id = 13, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 40}, station_id = 9}}, train_id = 25}, started_loading = true, state = "complete", train_id = 25}, {route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 404, request_station_id = 14, resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, stops = {{resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, station_id = 11}}, train_id = 19}, started_loading = true, state = "complete", train_id = 19}, {route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 530, request_station_id = 15, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 20}, station_id = 9}, {resources = {["iron-plate"] = 20}, station_id = 12}}, train_id = 10}, started_loading = true, state = "active", train_id = 10}} trains_state={nil, nil, nil, nil, nil, nil, nil, nil, nil, {capacity_stacks = 40, cargo_wagon_count = 1, delivery_id = 3, depot_id = 3, state = "assigned", train_state = 5}, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}} jobs={}
+   0.877 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1200 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.877 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1200 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.877 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1200 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.877 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1200 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.879 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1215 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.879 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1215 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.879 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1215 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.879 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1215 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.881 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1230 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.882 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1230 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.882 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1230 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.882 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1230 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.884 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1245 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.884 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1245 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.884 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1245 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.885 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1245 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.887 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1260 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.887 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1260 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.887 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1260 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.887 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1260 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.890 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1275 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.890 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1275 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.890 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1275 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.890 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1275 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.892 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1290 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.892 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1290 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.892 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1290 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.892 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1290 event=planning_job_completed data={request_id = 1, route_count = 0}
+Running update 1300
+   0.894 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1305 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.895 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1305 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.895 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1305 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.895 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1305 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.897 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1320 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.897 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1320 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.897 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1320 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.897 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1320 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.908 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1335 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.908 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1335 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.908 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1335 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.908 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1335 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.911 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1345 event=delivery_arrived_requester data={cargo_items = 4000, delivery_id = 3, request_id = 3, station_id = 15, train_id = 10}
+   0.911 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1345 event=delivery_reservation_released data={delivery_id = 3, delivery_state = "complete", request_id = 3, train_id = 10}
+   0.911 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1345 event=request_delivery_applied data={delivered_resources = {["iron-plate"] = 40}, previous_state = "assigned", remaining_resources = {["copper-plate"] = 30, ["iron-plate"] = 0, ["steel-plate"] = 20}, request_id = 3, state = "partial"}
+   0.911 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1345 event=delivery_completed data={delivery_id = 3, remaining_resources = {["copper-plate"] = 30, ["iron-plate"] = 0, ["steel-plate"] = 20}, request_id = 3, request_state = "partial", resources = {["iron-plate"] = 40}, train_id = 10}
+   0.913 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:321: TRAINMODE_LOAD_TEST train_cleared delivery_id=3 old_train_id=10 slot=3
+   0.913 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:345: TRAINMODE_LOAD_TEST train_recreated new_train_id=36 slot=3
+   0.913 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:345: TRAINMODE_LOAD_TEST train_recreated new_train_id=39 slot=6
+   0.914 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:345: TRAINMODE_LOAD_TEST train_recreated new_train_id=42 slot=8
+   0.914 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1350 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.914 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1350 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.914 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1350 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.914 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1350 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.917 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1365 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.917 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1365 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.917 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1365 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.917 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1365 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.921 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1380 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.922 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1380 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.922 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1380 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.922 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1380 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.927 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1395 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.927 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1395 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.927 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1395 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.927 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1395 event=planning_job_completed data={request_id = 1, route_count = 0}
+Running update 1400
+   0.931 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1410 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.932 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1410 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.932 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1410 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.932 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1410 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.934 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1425 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.934 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1425 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.934 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1425 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.934 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1425 event=planning_job_completed data={request_id = 1, route_count = 0}
+   0.938 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1440 event=planning_result_rejected data={error = "empty-route-plan", request_id = 1}
+   0.938 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1440 event=planning_job_enqueued data={depot_ids = {3, 6, 8}, loading_station_ids = {9, 10, 11, 12}, priority = 9, request_id = 1, station_id = 13}
+   0.938 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1440 event=planning_combinator_started data={depot_ids = {3, 6, 8}, loading_station_ids = {9, 10, 11, 12}, request_id = 1, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}}
+   0.938 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1440 event=planning_combinator_completed data={load_plans = {{capacity_stacks = 40, depot_ids = {3, 6, 8}, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 9}}, total_stacks = 30, train_class_id = 40}}, remaining_resources = {["copper-plate"] = 0}, request_id = 1}
+   0.938 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1440 event=planning_route_selected data={request_id = 1, route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 460, request_station_id = 13, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 9}}, train_id = 36}, route_index = 1}
+   0.938 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1440 event=planning_validation_completed data={request_id = 1, route_count = 1}
+   0.938 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1440 event=planning_job_completed data={request_id = 1, route_count = 1}
+   0.943 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1455 event=planning_result_accepted data={accepted_route_count = 1, available_target_slots = 1, planned_route_count = 1, request_id = 1, routes = {{depot_id = 3, depot_station_id = 3, estimated_path_length = 460, request_station_id = 13, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 9}}, train_id = 36}}}
+   0.943 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1455 event=delivery_reserved data={delivery_id = 4, request_id = 1, route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 460, request_station_id = 13, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 9}}, train_id = 36}}
+   0.943 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1455 event=delivery_assigned data={delivery_id = 4, request_id = 1, route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 460, request_station_id = 13, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 9}}, train_id = 36}, train_id = 36}
+   0.943 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1455 event=planning_job_enqueued data={depot_ids = {3, 6, 8}, loading_station_ids = {9, 10, 11, 12}, priority = 8, request_id = 2, station_id = 14}
+   0.943 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1455 event=planning_combinator_started data={depot_ids = {3, 6, 8}, loading_station_ids = {9, 10, 11, 12}, request_id = 2, requested_resources = {["electronic-circuit"] = 0, ["iron-gear-wheel"] = 0, ["steel-plate"] = 20}}
+   0.943 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1455 event=planning_combinator_completed data={load_plans = {{capacity_stacks = 40, depot_ids = {3, 6, 8}, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 10}}, total_stacks = 20, train_class_id = 40}}, remaining_resources = {["steel-plate"] = 0}, request_id = 2}
+   0.944 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1455 event=planning_route_selected data={request_id = 2, route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 344, request_station_id = 14, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 10}}, train_id = 42}, route_index = 1}
+   0.944 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1455 event=planning_validation_completed data={request_id = 2, route_count = 1}
+   0.944 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1455 event=planning_job_completed data={request_id = 2, route_count = 1}
+   0.946 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1470 event=planning_result_accepted data={accepted_route_count = 1, available_target_slots = 1, planned_route_count = 1, request_id = 2, routes = {{depot_id = 8, depot_station_id = 8, estimated_path_length = 344, request_station_id = 14, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 10}}, train_id = 42}}}
+   0.946 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1470 event=delivery_reserved data={delivery_id = 5, request_id = 2, route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 344, request_station_id = 14, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 10}}, train_id = 42}}
+   0.947 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1470 event=delivery_assigned data={delivery_id = 5, request_id = 2, route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 344, request_station_id = 14, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 10}}, train_id = 42}, train_id = 42}
+   0.947 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1470 event=planning_job_enqueued data={depot_ids = {6, 8}, loading_station_ids = {9, 10, 11, 12}, priority = 7, request_id = 3, station_id = 15}
+   0.947 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1470 event=planning_combinator_started data={depot_ids = {6, 8}, loading_station_ids = {9, 10, 11, 12}, request_id = 3, requested_resources = {["copper-plate"] = 30, ["iron-plate"] = 0, ["steel-plate"] = 20}}
+   0.947 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1470 event=planning_combinator_completed data={load_plans = {{capacity_stacks = 40, depot_ids = {6, 8}, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 10}}, total_stacks = 30, train_class_id = 40}, {capacity_stacks = 40, depot_ids = {6, 8}, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 10}, station_id = 10}, {resources = {["steel-plate"] = 10}, station_id = 11}}, total_stacks = 20, train_class_id = 40}}, remaining_resources = {["copper-plate"] = 0, ["steel-plate"] = 0}, request_id = 3}
+   0.947 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1470 event=planning_route_selected data={request_id = 3, route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 10}}, train_id = 39}, route_index = 1}
+   0.947 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1470 event=planning_validation_completed data={request_id = 3, route_count = 1}
+   0.947 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1470 event=planning_job_completed data={request_id = 3, route_count = 1}
+   0.950 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1485 event=planning_result_accepted data={accepted_route_count = 1, available_target_slots = 1, planned_route_count = 1, request_id = 3, routes = {{depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 10}}, train_id = 39}}}
+   0.950 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1485 event=delivery_reserved data={delivery_id = 6, request_id = 3, route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 10}}, train_id = 39}}
+   0.950 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1485 event=delivery_assigned data={delivery_id = 6, request_id = 3, route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 10}}, train_id = 39}, train_id = 39}
+Running update 1500
+Running update 1600
+Running update 1700
+   0.999 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1782 event=delivery_arrived_loader data={cargo_items = 0, cumulative_resources = {["steel-plate"] = 20}, delivery_id = 5, request_id = 2, station_id = 10, train_id = 42}
+Running update 1800
+   1.005 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:447: TRAINMODE_LOAD_TEST STATUS trains=8 tick=1800 elapsed=1620 request_states={{delivery_ids = {4}, remaining_resources = {["copper-plate"] = 30, ["iron-plate"] = 0}, state = "assigned"}, {delivery_ids = {5}, remaining_resources = {["electronic-circuit"] = 0, ["iron-gear-wheel"] = 0, ["steel-plate"] = 20}, state = "assigned"}, {delivery_ids = {6}, remaining_resources = {["copper-plate"] = 30, ["iron-plate"] = 0, ["steel-plate"] = 20}, state = "assigned"}} deliveries={{route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 310, request_station_id = 13, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 40}, station_id = 9}}, train_id = 25}, started_loading = true, state = "complete", train_id = 25}, {route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 404, request_station_id = 14, resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, stops = {{resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, station_id = 11}}, train_id = 19}, started_loading = true, state = "complete", train_id = 19}, {route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 530, request_station_id = 15, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 20}, station_id = 9}, {resources = {["iron-plate"] = 20}, station_id = 12}}, train_id = 10}, started_loading = true, state = "complete", train_id = 10}, {route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 460, request_station_id = 13, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 9}}, train_id = 36}, state = "active", train_id = 36}, {route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 344, request_station_id = 14, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 10}}, train_id = 42}, started_loading = true, state = "active", train_id = 42}, {route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 10}}, train_id = 39}, state = "active", train_id = 39}} trains_state={nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, nil, nil, {capacity_stacks = 40, cargo_wagon_count = 1, delivery_id = 4, depot_id = 3, state = "assigned", train_state = 5}, [39] = {capacity_stacks = 40, cargo_wagon_count = 1, delivery_id = 6, depot_id = 6, state = "assigned", train_state = 0}, [42] = {capacity_stacks = 40, cargo_wagon_count = 1, delivery_id = 5, depot_id = 8, state = "assigned", train_state = 0}} jobs={}
+   1.013 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1853 event=delivery_arrived_loader data={cargo_items = 0, cumulative_resources = {["copper-plate"] = 30}, delivery_id = 4, request_id = 1, station_id = 9, train_id = 36}
+   1.020 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=1896 event=delivery_arrived_loader data={cargo_items = 0, cumulative_resources = {["copper-plate"] = 30}, delivery_id = 6, request_id = 3, station_id = 10, train_id = 39}
+Running update 1900
+Running update 2000
+Running update 2100
+   1.066 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2185 event=delivery_arrived_requester data={cargo_items = 2000, delivery_id = 5, request_id = 2, station_id = 14, train_id = 42}
+   1.066 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2185 event=delivery_reservation_released data={delivery_id = 5, delivery_state = "complete", request_id = 2, train_id = 42}
+   1.066 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2185 event=request_delivery_applied data={delivered_resources = {["steel-plate"] = 20}, previous_state = "assigned", remaining_resources = {["electronic-circuit"] = 0, ["iron-gear-wheel"] = 0, ["steel-plate"] = 0}, request_id = 2, state = "complete"}
+   1.066 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2185 event=delivery_completed data={delivery_id = 5, remaining_resources = {["electronic-circuit"] = 0, ["iron-gear-wheel"] = 0, ["steel-plate"] = 0}, request_id = 2, request_state = "complete", resources = {["steel-plate"] = 20}, train_id = 42}
+   1.067 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:428: TRAINMODE_LOAD_TEST unused_depot_trains_removed=1 reason=test-track-has-no-depot-sidings
+Running update 2200
+   1.083 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2290 event=delivery_arrived_requester data={cargo_items = 3000, delivery_id = 4, request_id = 1, station_id = 13, train_id = 36}
+   1.083 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2290 event=delivery_reservation_released data={delivery_id = 4, delivery_state = "complete", request_id = 1, train_id = 36}
+   1.083 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2290 event=request_delivery_applied data={delivered_resources = {["copper-plate"] = 30}, previous_state = "assigned", remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0}, request_id = 1, state = "complete"}
+   1.083 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2290 event=delivery_completed data={delivery_id = 4, remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0}, request_id = 1, request_state = "complete", resources = {["copper-plate"] = 30}, train_id = 36}
+Running update 2300
+   1.086 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:428: TRAINMODE_LOAD_TEST unused_depot_trains_removed=1 reason=test-track-has-no-depot-sidings
+   1.096 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2372 event=delivery_arrived_requester data={cargo_items = 3000, delivery_id = 6, request_id = 3, station_id = 15, train_id = 39}
+   1.096 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2372 event=delivery_reservation_released data={delivery_id = 6, delivery_state = "complete", request_id = 3, train_id = 39}
+   1.096 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2372 event=request_delivery_applied data={delivered_resources = {["copper-plate"] = 30}, previous_state = "assigned", remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 20}, request_id = 3, state = "partial"}
+   1.096 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2372 event=delivery_completed data={delivery_id = 6, remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 20}, request_id = 3, request_state = "partial", resources = {["copper-plate"] = 30}, train_id = 39}
+   1.098 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2385 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 7, request_id = 3, station_id = 15}
+   1.098 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2385 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 3, requested_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 20}}
+   1.098 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2385 event=planning_job_completed data={request_id = 3, route_count = 0}
+Running update 2400
+   1.101 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:321: TRAINMODE_LOAD_TEST train_cleared delivery_id=6 old_train_id=39 slot=6
+   1.101 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:345: TRAINMODE_LOAD_TEST train_recreated new_train_id=48 slot=6
+   1.103 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:447: TRAINMODE_LOAD_TEST STATUS trains=8 tick=2400 elapsed=2220 request_states={{delivery_ids = {4}, remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0}, state = "complete"}, {delivery_ids = {5}, remaining_resources = {["electronic-circuit"] = 0, ["iron-gear-wheel"] = 0, ["steel-plate"] = 0}, state = "complete"}, {delivery_ids = {6}, remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 20}, state = "planning"}} deliveries={{route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 310, request_station_id = 13, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 40}, station_id = 9}}, train_id = 25}, started_loading = true, state = "complete", train_id = 25}, {route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 404, request_station_id = 14, resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, stops = {{resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, station_id = 11}}, train_id = 19}, started_loading = true, state = "complete", train_id = 19}, {route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 530, request_station_id = 15, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 20}, station_id = 9}, {resources = {["iron-plate"] = 20}, station_id = 12}}, train_id = 10}, started_loading = true, state = "complete", train_id = 10}, {route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 460, request_station_id = 13, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 9}}, train_id = 36}, started_loading = true, state = "complete", train_id = 36}, {route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 344, request_station_id = 14, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 10}}, train_id = 42}, started_loading = true, state = "complete", train_id = 42}, {route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 10}}, train_id = 39}, started_loading = true, state = "complete", train_id = 39}} trains_state={nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, [39] = {capacity_stacks = 40, cargo_wagon_count = 1, depot_id = 6, state = "idle", train_state = 2}, [43] = {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, [44] = {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}} jobs={}
+   1.103 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2400 event=planning_result_rejected data={error = "empty-route-plan", request_id = 3}
+   1.103 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2400 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 7, request_id = 3, station_id = 15}
+   1.103 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2400 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 3, requested_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 20}}
+   1.103 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2400 event=planning_job_completed data={request_id = 3, route_count = 0}
+   1.106 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2415 event=planning_result_rejected data={error = "empty-route-plan", request_id = 3}
+   1.106 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2415 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 7, request_id = 3, station_id = 15}
+   1.106 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2415 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 3, requested_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 20}}
+   1.106 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2415 event=planning_job_completed data={request_id = 3, route_count = 0}
+   1.109 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2430 event=planning_result_rejected data={error = "empty-route-plan", request_id = 3}
+   1.109 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2430 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 7, request_id = 3, station_id = 15}
+   1.109 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2430 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 3, requested_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 20}}
+   1.109 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2430 event=planning_job_completed data={request_id = 3, route_count = 0}
+   1.111 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2445 event=planning_result_rejected data={error = "empty-route-plan", request_id = 3}
+   1.111 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2445 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 7, request_id = 3, station_id = 15}
+   1.112 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2445 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 3, requested_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 20}}
+   1.112 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2445 event=planning_job_completed data={request_id = 3, route_count = 0}
+   1.114 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2460 event=planning_result_rejected data={error = "empty-route-plan", request_id = 3}
+   1.114 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2460 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 7, request_id = 3, station_id = 15}
+   1.114 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2460 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 3, requested_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 20}}
+   1.114 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2460 event=planning_job_completed data={request_id = 3, route_count = 0}
+   1.117 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2475 event=planning_result_rejected data={error = "empty-route-plan", request_id = 3}
+   1.117 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2475 event=planning_job_enqueued data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, priority = 7, request_id = 3, station_id = 15}
+   1.117 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2475 event=planning_combinator_started data={depot_ids = {}, loading_station_ids = {9, 10, 11, 12}, request_id = 3, requested_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 20}}
+   1.117 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2475 event=planning_job_completed data={request_id = 3, route_count = 0}
+   1.120 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2490 event=planning_result_rejected data={error = "empty-route-plan", request_id = 3}
+   1.120 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2490 event=planning_job_enqueued data={depot_ids = {6}, loading_station_ids = {9, 10, 11, 12}, priority = 7, request_id = 3, station_id = 15}
+   1.120 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2490 event=planning_combinator_started data={depot_ids = {6}, loading_station_ids = {9, 10, 11, 12}, request_id = 3, requested_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 20}}
+   1.120 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2490 event=planning_combinator_completed data={load_plans = {{capacity_stacks = 40, depot_ids = {6}, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 11}}, total_stacks = 20, train_class_id = 40}}, remaining_resources = {["steel-plate"] = 0}, request_id = 3}
+   1.120 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2490 event=planning_route_selected data={request_id = 3, route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 11}}, train_id = 48}, route_index = 1}
+   1.120 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2490 event=planning_validation_completed data={request_id = 3, route_count = 1}
+   1.120 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2490 event=planning_job_completed data={request_id = 3, route_count = 1}
+Running update 2500
+   1.123 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2505 event=planning_result_accepted data={accepted_route_count = 1, available_target_slots = 1, planned_route_count = 1, request_id = 3, routes = {{depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 11}}, train_id = 48}}}
+   1.123 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2505 event=delivery_reserved data={delivery_id = 7, request_id = 3, route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 11}}, train_id = 48}}
+   1.123 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2505 event=delivery_assigned data={delivery_id = 7, request_id = 3, route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 11}}, train_id = 48}, train_id = 48}
+Running update 2600
+Running update 2700
+Running update 2800
+Running update 2900
+   1.206 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=2948 event=delivery_arrived_loader data={cargo_items = 0, cumulative_resources = {["steel-plate"] = 20}, delivery_id = 7, request_id = 3, station_id = 11, train_id = 48}
+Running update 3000
+   1.216 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:447: TRAINMODE_LOAD_TEST STATUS trains=8 tick=3000 elapsed=2820 request_states={{delivery_ids = {4}, remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0}, state = "complete"}, {delivery_ids = {5}, remaining_resources = {["electronic-circuit"] = 0, ["iron-gear-wheel"] = 0, ["steel-plate"] = 0}, state = "complete"}, {delivery_ids = {7}, remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 20}, state = "assigned"}} deliveries={{route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 310, request_station_id = 13, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 40}, station_id = 9}}, train_id = 25}, started_loading = true, state = "complete", train_id = 25}, {route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 404, request_station_id = 14, resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, stops = {{resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, station_id = 11}}, train_id = 19}, started_loading = true, state = "complete", train_id = 19}, {route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 530, request_station_id = 15, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 20}, station_id = 9}, {resources = {["iron-plate"] = 20}, station_id = 12}}, train_id = 10}, started_loading = true, state = "complete", train_id = 10}, {route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 460, request_station_id = 13, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 9}}, train_id = 36}, started_loading = true, state = "complete", train_id = 36}, {route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 344, request_station_id = 14, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 10}}, train_id = 42}, started_loading = true, state = "complete", train_id = 42}, {route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 10}}, train_id = 39}, started_loading = true, state = "complete", train_id = 39}, {route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 11}}, train_id = 48}, started_loading = true, state = "active", train_id = 48}} trains_state={nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, nil, nil, nil, nil, nil, nil, nil, nil, nil, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, nil, nil, {capacity_stacks = 40, cargo_wagon_count = 1, delivery_id = 7, depot_id = 6, state = "assigned", train_state = 0}} jobs={}
+Running update 3100
+Running update 3200
+Running update 3300
+   1.270 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=3317 event=delivery_arrived_requester data={cargo_items = 2000, delivery_id = 7, request_id = 3, station_id = 15, train_id = 48}
+   1.270 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=3317 event=delivery_reservation_released data={delivery_id = 7, delivery_state = "complete", request_id = 3, train_id = 48}
+   1.271 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=3317 event=request_delivery_applied data={delivered_resources = {["steel-plate"] = 20}, previous_state = "assigned", remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 0}, request_id = 3, state = "complete"}
+   1.271 Script @__TRAINMODE__/scripts/diagnostics/logger.lua:35: TRAINMODE_TRACE tick=3317 event=delivery_completed data={delivery_id = 7, remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 0}, request_id = 3, request_state = "complete", resources = {["steel-plate"] = 20}, train_id = 48}
+   1.273 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:428: TRAINMODE_LOAD_TEST unused_depot_trains_removed=1 reason=test-track-has-no-depot-sidings
+   1.274 Script @__TRAINMODE__/scenarios/city-block-load-test/runner.lua:447: TRAINMODE_LOAD_TEST PASS trains=8 tick=3330 elapsed=3150 request_states={{delivery_ids = {4}, remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0}, state = "complete"}, {delivery_ids = {5}, remaining_resources = {["electronic-circuit"] = 0, ["iron-gear-wheel"] = 0, ["steel-plate"] = 0}, state = "complete"}, {delivery_ids = {7}, remaining_resources = {["copper-plate"] = 0, ["iron-plate"] = 0, ["steel-plate"] = 0}, state = "complete"}} deliveries={{route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 310, request_station_id = 13, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 40}, station_id = 9}}, train_id = 25}, started_loading = true, state = "complete", train_id = 25}, {route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 404, request_station_id = 14, resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, stops = {{resources = {["electronic-circuit"] = 20, ["iron-gear-wheel"] = 20}, station_id = 11}}, train_id = 19}, started_loading = true, state = "complete", train_id = 19}, {route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 530, request_station_id = 15, resources = {["iron-plate"] = 40}, stops = {{resources = {["iron-plate"] = 20}, station_id = 9}, {resources = {["iron-plate"] = 20}, station_id = 12}}, train_id = 10}, started_loading = true, state = "complete", train_id = 10}, {route = {depot_id = 3, depot_station_id = 3, estimated_path_length = 460, request_station_id = 13, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 9}}, train_id = 36}, started_loading = true, state = "complete", train_id = 36}, {route = {depot_id = 8, depot_station_id = 8, estimated_path_length = 344, request_station_id = 14, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 10}}, train_id = 42}, started_loading = true, state = "complete", train_id = 42}, {route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["copper-plate"] = 30}, stops = {{resources = {["copper-plate"] = 30}, station_id = 10}}, train_id = 39}, started_loading = true, state = "complete", train_id = 39}, {route = {depot_id = 6, depot_station_id = 6, estimated_path_length = 440, request_station_id = 15, resources = {["steel-plate"] = 20}, stops = {{resources = {["steel-plate"] = 20}, station_id = 11}}, train_id = 48}, started_loading = true, state = "complete", train_id = 48}} trains_state={nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, nil, nil, nil, nil, nil, nil, nil, nil, nil, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, {capacity_stacks = 0, cargo_wagon_count = 0, state = "idle"}, nil, nil, {capacity_stacks = 40, cargo_wagon_count = 1, depot_id = 6, state = "idle", train_state = 2}} jobs={}
+Running update 3400
+Running update 3500
+Running update 3600
+Running update 3700
+Running update 3800
+Running update 3900
+Running update 4000
+Running update 4100
+Running update 4200
+Running update 4300
+Running update 4400
+Running update 4500
+Running update 4600
+Running update 4700
+Running update 4800
+Running update 4900
+Running update 5000
+Running update 5100
+Running update 5200
+Running update 5300
+Running update 5400
+Running update 5500
+Running update 5600
+Running update 5700
+Running update 5800
+Running update 5900
+Running update 6000
+Running update 6100
+Running update 6200
+Running update 6300
+Running update 6400
+Running update 6500
+Running update 6600
+Running update 6700
+Running update 6800
+Running update 6900
+Running update 7000
+Running update 7100
+Running update 7200
+Running update 7300
+Running update 7400
+Running update 7500
+Running update 7600
+Running update 7700
+Running update 7800
+Running update 7900
+Running update 8000
+Running update 8100
+Running update 8200
+Running update 8300
+Running update 8400
+Running update 8500
+Running update 8600
+Running update 8700
+Running update 8800
+Running update 8900
+Running update 9000
+Running update 9100
+Running update 9200
+Running update 9300
+Running update 9400
+Running update 9500
+Running update 9600
+Running update 9700
+Running update 9800
+Running update 9900
+Running update 10000
+Running update 10100
+Running update 10200
+Running update 10300
+Running update 10400
+Running update 10500
+Running update 10600
+Running update 10700
+Running update 10800
+Running update 10900
+Running update 11000
+Running update 11100
+Running update 11200
+Running update 11300
+Running update 11400
+Running update 11500
+Running update 11600
+Running update 11700
+Running update 11800
+Running update 11900
+Running update 12000
+Running update 12100
+Running update 12200
+Running update 12300
+Running update 12400
+Running update 12500
+Running update 12600
+Running update 12700
+Running update 12800
+Running update 12900
+Running update 13000
+Running update 13100
+Running update 13200
+Running update 13300
+Running update 13400
+Running update 13500
+Running update 13600
+Running update 13700
+Running update 13800
+Running update 13900
+Running update 14000
+Running update 14100
+Running update 14200
+Running update 14300
+Running update 14400
+Running update 14500
+Running update 14600
+Running update 14700
+Running update 14800
+Running update 14900
+Running update 15000
+Running update 15100
+Running update 15200
+Running update 15300
+Running update 15400
+Running update 15500
+Running update 15600
+Running update 15700
+Running update 15800
+Running update 15900
+Running update 16000
+Running update 16100
+Running update 16200
+Running update 16300
+Running update 16400
+Running update 16500
+Running update 16600
+Running update 16700
+Running update 16800
+Running update 16900
+Running update 17000
+Running update 17100
+Running update 17200
+Running update 17300
+Running update 17400
+Running update 17500
+Running update 17600
+Running update 17700
+Running update 17800
+Running update 17900
+Running update 18000
+Running update 18100
+Running update 18200
+Running update 18300
+Running update 18400
+Running update 18500
+Running update 18600
+Running update 18700
+Running update 18800
+Running update 18900
+Running update 19000
+Running update 19100
+Running update 19200
+Running update 19300
+Running update 19400
+Running update 19500
+Running update 19600
+Running update 19700
+Running update 19800
+Running update 19900
+  Performed 20000 updates in 625.001 ms
+  avg: 0.031 ms, min: 0.000 ms, max: 4.912 ms
+  checksum: 1176582562
+   1.328 Goodbye

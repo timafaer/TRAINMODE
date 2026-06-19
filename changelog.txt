@@ -1,8 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
-Date: 2026-06-18
+Date: 2026-06-19
   Features:
     - Added smart stations, locomotives, depots, storages, dispatcher and GUI.
     - Added incremental multi-resource route planning and reservations.
     - Added direct loading and unloading through linked smart storages.
     - Added Russian and English localisation and a temporary universal icon.
+    - Added a headless end-to-end smoke scenario.
+    - Added structured runtime tracing and city-block load-test scenarios.
+  Bugfixes:
+    - Requeue requests after temporary planning or assignment failures.

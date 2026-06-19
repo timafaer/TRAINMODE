@@ -170,6 +170,9 @@ commands.add_command("trainmode-status", "Print TRAINMODE runtime status", funct
 end)
 
 remote.add_interface("TRAINMODE", {
+  set_debug_logging = function(enabled)
+    state().debug_logging = enabled == true
+  end,
   set_station_config = function(unit_number, config)
     local result = stations.configure(state(), unit_number, config or {})
     depots.rebuild(state())
@@ -182,5 +185,95 @@ remote.add_interface("TRAINMODE", {
   end,
   rebuild = function()
     bootstrap.rebuild(state(), storage_link_radius())
+  end,
+  get_status = function()
+    local runtime = state()
+    local result = {
+      station_count = 0,
+      train_count = 0,
+      depot_count = 0,
+      requests = {},
+      deliveries = {},
+      trains = {},
+      jobs = {},
+      results = {},
+      stations = {},
+      depots = {},
+    }
+    for _ in pairs(runtime.stations) do
+      result.station_count = result.station_count + 1
+    end
+    for train_id, record in pairs(runtime.trains) do
+      result.train_count = result.train_count + 1
+      result.trains[train_id] = {
+        state = record.state,
+        depot_id = record.depot_id,
+        delivery_id = record.active_delivery_id,
+        train_state =
+          record.train and record.train.valid and record.train.state or nil,
+        station_name =
+          record.train and record.train.valid and record.train.station
+            and record.train.station.backer_name or nil,
+        capacity_stacks = record.capacity_stacks,
+        cargo_wagon_count =
+          record.train and record.train.valid and #record.train.cargo_wagons or 0,
+      }
+    end
+    for depot_id, depot in pairs(runtime.depots) do
+      result.depot_count = result.depot_count + 1
+      result.depots[depot_id] = {
+        stations = depot.station_ids,
+        trains = depot.train_ids,
+      }
+    end
+    for station_id, station in pairs(runtime.stations) do
+      result.stations[station_id] = {
+        mode = station.mode,
+        resources = station.available_resources,
+        train_limit =
+          station.entity and station.entity.valid and station.entity.trains_limit,
+        trains_count =
+          station.entity and station.entity.valid and station.entity.trains_count,
+        connected_rail =
+          station.entity and station.entity.valid
+            and station.entity.connected_rail ~= nil,
+      }
+    end
+    for request_id, request in pairs(runtime.requests) do
+      result.requests[request_id] = {
+        state = request.state,
+        station_id = request.station_id,
+        last_error = request.last_error,
+        created_tick = request.created_tick,
+        requested_resources = request.requested_resources,
+        remaining_resources = request.remaining_resources,
+        delivery_ids = request.delivery_ids,
+      }
+    end
+    for delivery_id, delivery in pairs(runtime.deliveries) do
+      result.deliveries[delivery_id] = {
+        state = delivery.state,
+        train_id = delivery.train_id,
+        last_error = delivery.last_error,
+        started_loading = delivery.started_loading,
+        route = delivery.route,
+      }
+    end
+    for job_id, job in pairs(runtime.scheduler.jobs) do
+      result.jobs[job_id] = {
+        phase = job.phase,
+        status = job.status,
+        combinator_phase =
+          job.combinator_state and job.combinator_state.phase,
+        route_phase = job.route_state and job.route_state.phase,
+      }
+    end
+    for result_id, routes in pairs(runtime.scheduler.results) do
+      result.results[result_id] = {
+        route_count = #routes,
+        error = routes.error,
+      }
+    end
+    return result
   end,
 })

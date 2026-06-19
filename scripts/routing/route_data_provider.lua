@@ -74,4 +74,9 @@ function route_data_provider.get_data_version(entity_type, entity_id)
   return nil
 end
 
+-- Receives an optional structured diagnostic event from the pure planner.
+-- Получает необязательное структурированное событие чистого планировщика.
+function route_data_provider.trace(_event_name, _data)
+end
+
 return route_data_provider

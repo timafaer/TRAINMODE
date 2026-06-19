@@ -7,6 +7,7 @@ local get_ideal_routes = require("scripts.routing.get_ideal_routes")
 local scheduler_module = require("scripts.routing.scheduler")
 local train_api = require("scripts.integrations.train_api")
 local cargo_transfer = require("scripts.integrations.cargo_transfer")
+local logger = require("scripts.diagnostics.logger")
 
 local service = {}
 
@@ -28,6 +29,17 @@ local function cumulative_resources_at_station(route, station_id)
     end
   end
   return nil
+end
+
+local function should_log_arrival(delivery, station_id, cargo_items)
+  if delivery.last_logged_station_id == station_id
+    and delivery.last_logged_cargo_items == cargo_items
+  then
+    return false
+  end
+  delivery.last_logged_station_id = station_id
+  delivery.last_logged_cargo_items = cargo_items
+  return true
 end
 
 local function scheduler(state)
@@ -58,8 +70,10 @@ function service.refresh_stations(state, tick)
   for _, station in pairs(state.stations) do
     if station.entity and station.entity.valid then
       if station.mode == constants.station_modes.load then
-        station.available_resources =
+        station.available_resources = merge_resources(
+          station.manual_resources,
           circuit_network.read_red_items(station.entity)
+        )
       elseif station.mode == constants.station_modes.unload and station.enabled then
         if circuit_network.evaluate_condition(station.entity, station.condition) then
           local requested = merge_resources(
@@ -184,10 +198,23 @@ local function enqueue_open_request(state, planner)
       if job then
         planner:add(job)
         request.state = constants.request_states.planning
+        logger.trace("planning_job_enqueued", {
+          request_id = request.id,
+          station_id = request.station_id,
+          priority = request.priority,
+          loading_station_ids = job.loading_station_ids,
+          depot_ids = job.depot_ids,
+        })
       end
       return
     end
   end
+end
+
+local function retry_request(state, request, error_message)
+  request.state = constants.request_states.open
+  request.last_error = error_message
+  state.pending_requests[#state.pending_requests + 1] = request.id
 end
 
 local function accept_one_result(state, planner)
@@ -196,7 +223,15 @@ local function accept_one_result(state, planner)
     if routes then
       planner:take_result(request_id)
       if routes.error or #routes == 0 then
-        request.state = constants.request_states.open
+        retry_request(
+          state,
+          request,
+          routes.error or "empty-route-plan"
+        )
+        logger.trace("planning_result_rejected", {
+          request_id = request.id,
+          error = request.last_error,
+        })
         return
       end
 
@@ -217,15 +252,26 @@ local function accept_one_result(state, planner)
         accepted_routes[#accepted_routes + 1] = routes[index]
       end
       if #accepted_routes == 0 then
-        request.state = constants.request_states.open
+        retry_request(state, request, nil)
+        logger.trace("planning_result_waiting_target_slot", {
+          request_id = request.id,
+          planned_route_count = #routes,
+        })
         return
       end
+      logger.trace("planning_result_accepted", {
+        request_id = request.id,
+        planned_route_count = #routes,
+        accepted_route_count = #accepted_routes,
+        available_target_slots = available_target_slots,
+        routes = accepted_routes,
+      })
+      request.last_error = nil
 
       local delivery_ids, err =
         reservations.reserve_routes(state, request_id, accepted_routes)
       if not delivery_ids then
-        request.state = constants.request_states.open
-        request.last_error = err
+        retry_request(state, request, err)
         return
       end
 
@@ -240,12 +286,24 @@ local function accept_one_result(state, planner)
           delivery.last_error = assign_error
           reservations.release_delivery(state, delivery)
           train_api.restore_train(state, delivery)
+          logger.trace("delivery_assignment_failed", {
+            request_id = request.id,
+            delivery_id = delivery.id,
+            train_id = delivery.train_id,
+            error = assign_error,
+          })
         else
           assigned_count = assigned_count + 1
+          logger.trace("delivery_assigned", {
+            request_id = request.id,
+            delivery_id = delivery.id,
+            train_id = delivery.train_id,
+            route = delivery.route,
+          })
         end
       end
       if assigned_count == 0 then
-        request.state = constants.request_states.open
+        retry_request(state, request, "all-route-assignments-failed")
       else
         request.state = constants.request_states.assigned
       end
@@ -282,12 +340,33 @@ local function try_complete_train(state, train)
 
   local target = state.stations[delivery.route.request_station_id]
   if target and station_id == target.id then
+    local cargo_items = train.get_item_count()
+    if should_log_arrival(delivery, station_id, cargo_items) then
+      logger.trace("delivery_arrived_requester", {
+        request_id = delivery.request_id,
+        delivery_id = delivery.id,
+        train_id = train.id,
+        station_id = station_id,
+        cargo_items = cargo_items,
+      })
+    end
     cargo_transfer.unload_route(state, train, delivery.route)
   else
     local cumulative =
       cumulative_resources_at_station(delivery.route, station_id)
     if cumulative then
       delivery.started_loading = true
+      local cargo_items = train.get_item_count()
+      if should_log_arrival(delivery, station_id, cargo_items) then
+        logger.trace("delivery_arrived_loader", {
+          request_id = delivery.request_id,
+          delivery_id = delivery.id,
+          train_id = train.id,
+          station_id = station_id,
+          cumulative_resources = cumulative,
+          cargo_items = cargo_items,
+        })
+      end
       cargo_transfer.load_stop(state, train, station_id, cumulative)
     end
   end
@@ -298,6 +377,14 @@ local function try_complete_train(state, train)
     train_api.restore_train(state, delivery)
     local request = state.requests[delivery.request_id]
     requests.apply_delivery(request, delivery.route.resources)
+    logger.trace("delivery_completed", {
+      request_id = delivery.request_id,
+      delivery_id = delivery.id,
+      train_id = delivery.train_id,
+      resources = delivery.route.resources,
+      request_state = request.state,
+      remaining_resources = request.remaining_resources,
+    })
     if request.state == constants.request_states.partial then
       local has_active_delivery = false
       for _, delivery_id in ipairs(request.delivery_ids) do

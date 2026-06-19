@@ -84,15 +84,34 @@ function scheduler:step(operation_budget)
     performed = performed + 1
 
     if job.status == "completed" then
+      if self.provider.trace then
+        self.provider.trace("planning_job_completed", {
+          request_id = job.request_id,
+          route_count = #job.routes,
+        })
+      end
       self.results[job.id] = job.routes
       self.jobs[job.id] = nil
     elseif job.status == "restart_required" then
+      if self.provider.trace then
+        self.provider.trace("planning_job_restarted", {
+          request_id = job.request_id,
+          phase = job.phase,
+        })
+      end
       local replacement = self.job_factory(job.request_id)
       self.jobs[job.id] = nil
       if replacement then
         self.jobs[replacement.id] = replacement
       end
     elseif job.status == "failed" then
+      if self.provider.trace then
+        self.provider.trace("planning_job_failed", {
+          request_id = job.request_id,
+          error = job.error,
+          route_count = #job.routes,
+        })
+      end
       self.results[job.id] = {
         error = job.error,
         routes = job.routes,

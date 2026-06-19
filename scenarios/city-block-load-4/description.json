@@ -1,0 +1,4 @@
+{
+  "scenario-name": "TRAINMODE city blocks: 4 trains",
+  "description": "Four source blocks, three requester blocks and four smart trains."
+}

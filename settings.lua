@@ -17,4 +17,11 @@ data:extend({
     maximum_value = 64,
     order = "b",
   },
+  {
+    type = "bool-setting",
+    name = "trainmode-debug-logging",
+    setting_type = "runtime-global",
+    default_value = false,
+    order = "c",
+  },
 })

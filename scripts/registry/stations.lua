@@ -16,6 +16,7 @@ local function default_record(id, entity)
     send_only_to_buffer = false,
     source_policy = "normal",
     depot_id = nil,
+    manual_resources = {},
     manual_requests = {},
     condition = nil,
     available_resources = {},
@@ -77,6 +78,9 @@ function stations.configure(state, unit_number, config)
   end
   if config.manual_requests then
     station.manual_requests = config.manual_requests
+  end
+  if config.manual_resources then
+    station.manual_resources = config.manual_resources
   end
   if config.condition ~= nil then
     station.condition = config.condition
